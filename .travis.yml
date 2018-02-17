@@ -1,0 +1,12 @@
+language: c
+
+env:
+  global:
+    - C_FLAGS="-Wall -pedantic -Werror"
+
+script:
+     - mkdir -p build
+     - cd build
+     - cmake -DCMAKE_BUILD_TYPE=Release ..
+     - make
+     - sqrt-benchmark
