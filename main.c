@@ -7,7 +7,7 @@
 static const int TEST_COUNT = 64 * 1000 * 1000;
 
 float fake_random(int seed) {
-    return seed + 1.00001f;
+    return seed + 0.0004;
 }
 
 int main(void) {
