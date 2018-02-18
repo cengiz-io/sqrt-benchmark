@@ -1,6 +1,4 @@
 version: 1.0.{build}
 build_script:
 - cmd: >-
-    mkdir build
-
-    cmake --build "build"
+    cmake --build build
