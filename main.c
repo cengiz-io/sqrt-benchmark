@@ -4,21 +4,22 @@
 #include "fast_sqrt.h"
 #include "macros.h"
 
-static const int TEST_COUNT = 4 * 1000 * 1000;
-static const int MAX_NUMBER = 128 * 1000;
+static const int TEST_COUNT = 64 * 1000 * 1000;
+
+float fake_random(int seed) {
+    return seed + 4.0;
+}
 
 int main(void) {
-    srand((unsigned int) time(NULL));
-
     MEASURE_ELAPSED_TIME("fast", {
         for (int i = 0; i < TEST_COUNT; i++) {
-            volatile double val = fast_sqrt(rand() % MAX_NUMBER);
+            volatile double val = fast_sqrt(fake_random(i));
         }
     });
 
     MEASURE_ELAPSED_TIME("gnu", {
         for (int i = 0; i < TEST_COUNT; i++) {
-            volatile double val = 1 / sqrt(rand() % MAX_NUMBER);
+            volatile double val = 1 / sqrt(fake_random(i));
         }
     });
 }
