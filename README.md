@@ -2,8 +2,9 @@
 Is 0x5f3759df really that fast?
 
 ```
-        fast completed in 2.174317s
-         gnu completed in 0.872684s
+$ ./sqrt_benchmark
+        fast completed in 0.744346s
+         gnu completed in 1.136635s
 ```
 
 :thumbsup: yep
