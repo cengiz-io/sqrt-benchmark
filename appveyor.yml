@@ -2,6 +2,9 @@ version: 1.0.{build}
 build_script:
 - cmd: >-
     mkdir build
+
     cd build
+
     cmake ..
+
     msbuild sqrt_benchmark.sln /p:Configuration=Debug
