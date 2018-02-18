@@ -1,4 +1,4 @@
-# sqrt-benchmark
+# sqrt-benchmark [![Build Status](https://travis-ci.org/cengizIO/sqrt-benchmark.svg?branch=master)](https://travis-ci.org/cengizIO/sqrt-benchmark)
 Is 0x5f3759df really that fast?
 
 ```
