@@ -16,14 +16,14 @@ int main(void) {
     srand((unsigned int) time(NULL));
 
     MEASURE_ELAPSED_TIME("fast", {
-        for (int i = 1; i < TEST_COUNT; i++) {
+        for (int i = 0; i < TEST_COUNT; i++) {
             double val = fast_sqrt(rand() % MAX_NUMBER);
             fprintf(dev_null_ptr, "%f", val);
         }
     });
 
     MEASURE_ELAPSED_TIME("gnu", {
-        for (int i = 1; i < TEST_COUNT; i++) {
+        for (int i = 0; i < TEST_COUNT; i++) {
             double val = 1 / sqrt(rand() % MAX_NUMBER);
             fprintf(dev_null_ptr, "%f", val);
         }
