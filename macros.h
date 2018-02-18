@@ -5,15 +5,15 @@
 
 #define MEASURE_ELAPSED_TIME(name, ...) \
     { \
-        clock_t name_start = clock(); \
+        clock_t _start = clock(); \
         \
         __VA_ARGS__ \
         \
-        clock_t name_end = clock(); \
+        clock_t _end = clock(); \
         printf( \
             "%12s completed in %6fs\n", \
             name, \
-            (float) (name_end - name_start) / CLOCKS_PER_SEC \
+            (float) (_end - _start) / CLOCKS_PER_SEC \
         ); \
     }
 

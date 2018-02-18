@@ -7,7 +7,7 @@
 static const int TEST_COUNT = 64 * 1000 * 1000;
 
 float fake_random(int seed) {
-    return seed + 4.0;
+    return seed + 1.00001f;
 }
 
 int main(void) {
@@ -17,7 +17,7 @@ int main(void) {
         }
     });
 
-    MEASURE_ELAPSED_TIME("gnu", {
+    MEASURE_ELAPSED_TIME("libc", {
         for (int i = 0; i < TEST_COUNT; i++) {
             volatile double val = 1 / sqrt(fake_random(i));
         }
