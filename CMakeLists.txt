@@ -1,4 +1,4 @@
-CMAKE_MINIMUM_REQUIRED(VERSION 3.9)
+CMAKE_MINIMUM_REQUIRED(VERSION 3.7)
 PROJECT(sqrt_benchmark)
 
 ADD_EXECUTABLE(sqrt_benchmark main.c macros.h fast_rsqrt.h)
